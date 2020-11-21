@@ -29,5 +29,9 @@ def loadstatejson(statefile):
     df['new_bidenvotes'] = df.biden_share*df.votechange
 
     df = df.filter(items=['timestamp', 'votechange', 'trump_share', 'biden_share', 'new_trumpvotes','new_bidenvotes','votes','eevp_source','eevp'])
+    
+    f.close()
 
     return df
+
+# print(f"{chr(21328)}")
